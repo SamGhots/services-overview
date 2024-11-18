@@ -1,0 +1,252 @@
+#card-prices {}
+
+.cd-pr-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cd-pr-text h2 {
+  margin: 0px 0px 15px;
+}
+
+.cd-pr-text h3 {
+  margin: 0px 0px 30px;
+}
+
+.cd-pr-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* สามคอลัมน์ในขนาดหน้าจอปกติ */
+  column-gap: 30px;
+}
+
+.cd-pr {
+  /*background-color: #ff0000;*/
+  
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 20px;
+}
+
+.cd-box button {
+ 
+  background-color: #3f78e0;
+  padding: 10px 24px;
+  color: #ffff;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  /**/
+}
+
+.cd-box {
+   /*  background-color: #0008f9;*/
+
+  display: grid;
+  padding: 60px 50px;
+justify-content: center;
+
+}
+
+
+
+
+.card-top{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.card-top .card-mo{
+
+}
+
+.card-top .card-s{
+ 
+
+}
+.card-top h1{
+  font-size: 42px;
+}
+.card-mo{
+  margin-top: 30px;
+}
+.card-icon{
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+.card-icon i {
+  font-size: 40px; /* Adjust the size as needed */
+
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.cd-box i {
+  color: #3f78e0;
+}
+
+.cd-box ul {
+  list-style-type: none;
+  /* Remove bullet points */
+  padding: 0;
+}
+
+.cd-box li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+
+}
+
+.cd-box .icon-circle {
+  background-color: #dce7f9;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* วงกลมไอคอน*/
+
+
+
+
+
+
+
+
+.pricing-top {
+  display: flex;
+  width: 100%;
+  /* background-color: #28a745;*/
+
+  justify-content: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #dee3ed;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #2196F3;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  /* background-color: #2196F3;*/
+
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.pr-monthly {
+  font-size: 16px;
+  color: #60697b;
+  padding: 0px 15px 0px 0px;
+}
+
+.pr-save {
+  font-size: 16px;
+  color: #60697b;
+  padding: 0px 0px 0px 15px;
+}
+
+.pr-save span {
+  color: red;
+}
+
+.corporate-plan {
+  height: 110%;
+}
+
+.premium-plan {
+
+  /* margin-top: 30px;*/
+
+}
+
+@media (max-width: 1000px) {
+  .cd-pr-container {
+    grid-template-columns: 1fr 1fr; /* สองคอลัมน์ในขนาดหน้าจอเล็ก */
+    grid-template-rows: auto; /* ให้ความสูงของแถวเป็นอัตโนมัติ */
+  }
+  
+  .cd-pr {
+    justify-self: center; /* จัดการ์ดให้อยู่กลาง */
+  }
+  
+  .cd-pr:nth-child(3) {
+    grid-column: span 2; /* ขยายการ์ดให้เต็มสองคอลัมน์ */
+    justify-self: center; /* จัดให้อยู่กลาง */
+  }
+  
+}
+@media (max-width: 700px) {
+  .cd-pr-container {
+    grid-template-columns: 1fr; /* หนึ่งคอลัมน์ในขนาดหน้าจอเล็กที่สุด */
+  }
+  
+  .cd-pr {
+    justify-self: stretch; /* ให้การ์ดใช้ความกว้างเต็มของคอลัมน์ */
+  }
+  
+  .cd-pr:nth-child(3) {
+    grid-column: auto; /* ยกเลิกการขยายให้เต็มสองคอลัมน์ */
+    justify-self: stretch; /* ให้การ์ดใช้ความกว้างเต็มของคอลัมน์ */
+  }
+}

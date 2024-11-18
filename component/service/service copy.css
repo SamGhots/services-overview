@@ -1,0 +1,188 @@
+#service{
+display: grid;
+column-gap:20px;
+/*grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+grid-template-columns: 1fr 2fr;
+background-color: rgb(225, 198, 65);
+*/
+grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
+
+
+}
+/*------------------------------------------------------*/
+/*box ซ้าย ขวา*/
+.se-left{
+  /*  background-color: brown;*/
+ 
+}
+.se-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* แบ่งเป็นสองคอลัมน์ที่กว้างเท่ากัน */
+  grid-template-rows: repeat(2, 1fr); /* แบ่งเป็นสองแถวที่กว้างเท่ากัน */
+  gap: 10px; /* ระยะห่างระหว่างกล่อง */
+}
+
+.se-box1 {
+  background-color: #fef3e4;
+  /*grid-column: 1 / 2;
+   grid-row: 1 / 2;
+  
+  */
+   /* ครอบคลุมคอลัมน์ที่ 1 */
+  /* ครอบคลุมแถวที่ 1 */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.se-box2 {
+  background-color: #fae6e7;
+  /*grid-column: 2 / 3;
+   grid-row: 1 / 2;
+  */
+   /* ครอบคลุมคอลัมน์ที่ 2 */
+  /* ครอบคลุมทั้งแถวที่ 1 และ 2 */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.se-box3 {
+  background-color: #eaf3ef;
+ /* ครอบคลุมคอลัมน์ที่ 1 */
+ /* ครอบคลุมแถวที่ 2 */
+
+  /*  grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.se-box4 {
+  background-color:#e0e9fa;
+
+  /* grid-column: 2 / 3;
+
+  grid-row: 2 / 3;
+   */
+  /* ครอบคลุมคอลัมน์ที่ 2 */
+   /* ครอบคลุมแถวที่ 2 */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+/*------------------------------------------------------*/
+
+
+/*------------------------------------------------------*/
+/* เนื้อหาประกอบ*/
+
+/*ด้านซ้าย*/
+.se-left h2{
+  font-size: 15px;
+  color: var(--h2); /*นําสีมาจาก style ส่วนของ root*/
+  margin: 0px 0px 15px;
+}
+
+.se-left h3{
+  font-size: 36px;
+  color: var(--h3); /*นําสีมาจาก style ส่วนของ root*/
+  margin: 0px 0px 25px;
+}
+
+.se-left p{
+  font-size: 16px;
+  color: var(--p); /*นําสีมาจาก style ส่วนของ root*/
+  margin: 0px 0px 20px;
+}
+
+.se-left button{
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #343F52;
+  margin: 15px 0px 20px ;
+  border-radius: 20px;
+  padding: 10px 24px;
+  border: none;
+
+}
+
+/*------------------------------------------------------*/
+/* เนื้อหาประกอบ*/
+
+/*ด้านขวา*/
+
+.se-box1 h4,
+.se-box2 h4,
+.se-box3 h4,
+.se-box4 h4 {
+  font-size: 19px;
+  color: var(--h4);
+  margin:0px 0px 10px;
+}
+
+
+.se-box1 p,
+.se-box2 p,
+.se-box3 p,
+.se-box4 p {
+  font-size: 16px;
+  color: var(--p);
+}
+
+.se-box1 i,
+.se-box2 i,
+.se-box3 i,
+.se-box4 i {
+  font-size: 19px;
+
+  margin:0px 0px 15px;
+  
+}
+@media (max-width:  900px) {
+  .se-left{
+    order: 2;
+    margin-top: 25px;
+  }
+  .se-right{
+    order: 1;
+  }
+  .se-left h3 {
+  font-size: 30px;
+  }
+}
+
+
+@media (max-width:  768px) {
+  .se-right {
+    grid-template-columns: 1fr; /* เปลี่ยนเป็นหนึ่งคอลัมน์ */
+    grid-template-rows: repeat(4, 1fr); /* เพิ่มจำนวนแถวเป็น 4 แถว */
+  }
+
+  
+}
+@media (max-width:  600px) {
+  #service{
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
+    
+    
+    }
+
+  
+}
+
+@media (max-width: 320px) {
+
+  .se-left{
+    order: 2;
+    margin-top: 25px;
+  }
+  .se-right{
+    order: 1;
+  }
+  .se-left h3 {
+  font-size: 30px;
+  }
+}

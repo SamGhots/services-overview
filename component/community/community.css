@@ -1,0 +1,27 @@
+#community{
+  background-image: url('map.png');
+  background-size: 900px 400px; /* กำหนดขนาดรูปเป็น 100px ความกว้าง และ 200px ความสูง */
+  background-position: center; /* กำหนดให้ภาพอยู่ตรงกลาง */
+  background-repeat: no-repeat; /* ป้องกันไม่ให้ภาพซ้ำ */
+  padding: 50px 0; /* เพิ่ม padding เพื่อให้เนื้อหาไม่ชนขอบ */
+}
+.co-top{
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.co-top h2{
+  margin: 0px 0px 15px;
+}
+.co-down{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.co-down h3{
+  color: #3f78e0;
+  font-size: 40px;
+}
